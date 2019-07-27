@@ -2,7 +2,7 @@
 #----------------------------------------------------------#
 # Script for running eligible SUNNY-CP
 #------------------------------------------#
-EXEC="sunny-cp -R gecode,chuffed"
+EXEC="sunny-cp -P picat,izplus,choco,ortools,gecode,jacop,yuck"
 while (( "$#" ))
 do
     case $1 in
