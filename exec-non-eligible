@@ -1,0 +1,26 @@
+#!/bin/bash
+#----------------------------------------------------------#
+# Script for running non-eligible SUNNY-CP
+#------------------------------------------#
+EXEC="sunny-cp"
+while (( "$#" ))
+do
+    case $1 in
+    -p) 
+        shift
+        EXEC="$EXEC -p $1" 
+        ;;
+    -a)
+        EXEC="$EXEC -a"
+        ;;
+    -f)
+        EXEC="$EXEC -f"
+        ;;
+    *)
+        EXEC="$EXEC $1"
+        ;;
+    esac
+    shift
+done
+
+$EXEC
